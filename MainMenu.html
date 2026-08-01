@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Menu</title>
+
+    <link rel="stylesheet" href="./CSS/Global.css">
+    <link rel="stylesheet" href="./CSS/MainMenu.css">
+    <script src="./JS/mainmenu.js" defer></script>
+    <script src="./JS/Contact.js" defer></script>
+    <script src="./JS/Settings.js" defer></script>
+    <script src="./JS/GlobalNavigation.js" defer></script>
+
+</head>
+
+<body>
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="logo-container">
+                <img src="./Images/Logo.png" alt="EV Charge Logo" class="logo-img">
+                <span class="logo">EV Charge</span>
+            </div>
+
+            <div class="nav-icons">
+                <span class="icon" id="contact-btn">Contact</span>
+                <span class="icon" id="settings-btn">Settings</span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="welcome-section">
+            <div class="welcome-text">
+                <h1 id="welcome-message">Hello, Driver! 👋</h1>
+                <p>Ready to charge?</p>
+            </div>
+        </section>
+
+        <section class="menu-grid">
+            <button class="menu-card-row" id="profile-btn">
+                <span class="card-text">Edit Profile</span>
+                <span class="card-icon">👤</span>
+            </button>
+
+            <button class="menu-card-row" id="favorites-btn">
+                <span class="card-text">Favorites</span>
+                <span class="card-icon">❤️</span>
+            </button>
+
+            <button class="menu-card-row" id="stations-btn">
+                <span class="card-text">Find nearby stations</span>
+                <span class="card-icon">📍</span>
+            </button>
+
+            <button class="menu-card-row" id="map-btn">
+                <span class="card-text">Map View</span>
+                <span class="card-icon">🗺️</span>
+            </button>
+
+            <button class="menu-card-row" id="logout-btn">
+                <span class="card-text">Log Out</span>
+                <span class="card-icon">↩️</span>
+            </button>
+        </section>
+
+        <div id="logout-modal" class="modal-overlay hidden">
+            <div class="modal-content">
+                <p>Are you sure you want to log out?</p>
+                <div class="modal-buttons">
+                    <button id="logout-cancel-btn" class="secondary-btn">Cancel</button>
+                    <button id="logout-confirm-btn" class="primary-btn">OK</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>© 2026 EV Charge. All rights reserved to Mickey Zilberman and Gil Cohen.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

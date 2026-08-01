@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EV Charge - Register</title>
+    <link rel="stylesheet" href="./CSS/Global.css">
+    <link rel="stylesheet" href="./CSS/Register.css">
+    <script src="./JS/config.js"></script>
+    <script src="./JS/Register.js" defer></script>
+</head>
+<body>
+    <header class="main-header register-header">
+        <nav class="nav-container">
+            <div class="logo-container">
+                <img src="./Images/Logo.png" alt="EV Charge Logo" class="logo-img">
+                <span class="logo">EV Charge</span>
+            </div>
+            <div class="nav-icons">
+                <button type="button" class="icon" id="contact-btn">Contact</button>
+                <button type="button" class="icon" id="settings-btn">Settings</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content register-page">
+        <section class="register-title">
+            <h1>Create Account ⚡</h1>
+            <p>Join EV Charge and manage your charging reservations.</p>
+        </section>
+
+        <form id="register-form" class="register-form">
+            <div class="form-group">
+                <label for="full-name">Full Name:</label>
+                <input type="text" id="full-name" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Create a password" required>
+            </div>
+
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+            </div>
+
+            <div class="form-group">
+                <label for="car-model">Electric Car Model:</label>
+                <select id="car-model" class="form-group-select" required>
+                    <option value="" disabled selected>Select your car model</option>
+                    <option value="Tesla">Tesla</option>
+                    <option value="BYD">BYD</option>
+                    <option value="Geely">Geely</option>
+                    <option value="MG4">MG4</option>
+                    <option value="Hyundai">Hyundai</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div id="register-message" class="register-message hidden"></div>
+
+            <div id="loading-spinner" class="spinner-container hidden">
+                <div class="spinner"></div>
+            </div>
+
+            <button type="submit" class="register-btn">Create Account</button>
+
+            <button type="button" class="back-login-btn" id="back-login-btn">
+                Back to Login
+            </button>
+        </form>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>© 2026 EV Charge. All rights reserved to Mickey Zilberman and Gil Cohen.</p>
+        </div>
+    </footer>
+</body>
+</html>

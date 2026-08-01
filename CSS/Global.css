@@ -1,0 +1,412 @@
+:root {
+    --bg-main: #9ed3f2;      
+    --card-bg: white;        
+    --text-color: #12355b;   
+    --row-bg: #f3f9ff;       
+}
+
+body.dark-mode {
+    --bg-main: #121212;      
+    --card-bg: #1e1e1e;      
+    --text-color: #ffffff;   
+    --row-bg: #2d2d2d;       
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #A3D9FF; 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+.main-header {
+  padding: 20px 10px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #2170FF;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+  mix-blend-mode: multiply;
+}
+
+.nav-icons {
+  margin: 0;
+  color: #1A365D;
+  font-size: 1.2em;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-icons span {
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.nav-icons span:hover {
+  color: #2170FF;
+}
+
+.main-content {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 10px 20px 40px;
+  min-height: calc(100vh - 180px); 
+}
+
+.welcome-section {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #1A365D;
+  background-color: transparent; 
+  padding: 10px;
+}
+
+.welcome-section h1 {
+  font-size: 2.2em;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.welcome-section p {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #1A365D;
+  margin-top: 0;
+}
+
+.back-navigation {
+  max-width: 600px;
+  margin: 0 auto 15px auto;
+  padding: 0 10px;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: #1A365D;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.back-btn:hover {
+  color: #2170FF;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  box-shadow: none;
+  padding: 25px 10px 10px;
+  margin-top: 20px;
+  gap: 28px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 1.35em;
+  font-weight: 800;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group select {
+  height: 58px;
+  border-radius: 999px; 
+  border: none;
+  background-color: #ffffff;
+  text-align: center;
+  font-size: 1.25em;
+  font-weight: 700;
+  color: #000000;
+  padding: 0 20px;
+}
+
+.form-group input::placeholder {
+  color: #7d9bc4;
+  font-weight: 500;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: 3px solid #2170FF;
+}
+
+.submit-btn {
+  height: 60px;
+  background-color: #2170FF;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  font-size: 1.4em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  margin-top: 15px;
+  box-shadow: 0 4px 10px rgba(33, 112, 255, 0.3);
+}
+
+.submit-btn:hover {
+  background-color: #1A56CC;
+}
+
+.submit-btn:active {
+  transform: scale(0.98);
+}
+
+.hidden {
+  display: none !important;
+}
+
+.main-footer {
+  background-color: transparent;
+  padding: 20px 10px;
+  margin-top: auto;
+}
+
+.footer-content {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  color: #1A365D;
+  font-weight: bold;
+  font-size: 0.95em;
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.3em;
+  }
+  
+  .welcome-section h1 {
+    font-size: 1.8em;
+  }
+
+  .form-group label {
+    font-size: 1.15em;
+  }
+
+  .form-group input,
+  .form-group select {
+    height: 50px;
+    font-size: 1.1em;
+  }
+
+  .submit-btn {
+    height: 52px;
+    font-size: 1.20em;
+  }
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode main, 
+body.dark-mode header, 
+body.dark-mode footer,
+body.dark-mode .main-header,
+body.dark-mode .main-footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+body.dark-mode .settings-card,
+body.dark-mode .menu-card,
+body.dark-mode .station-display-card,
+body.dark-mode .card,
+body.dark-mode .welcome-section {
+    background-color: #242424;
+    color: #ffffff;
+}
+
+body.dark-mode {
+    --bg-main: #121212;      
+    --card-bg: #1e1e1e;      
+    --text-color: #ffffff;   
+    --row-bg: #2d2d2d;
+    --accent-blue: #1d56b3;  
+    --modal-bg: #2a2a2a;     
+}
+
+body.dark-mode {
+    background-color: var(--bg-main) !important;
+    color: var(--text-color) !important;
+}
+
+body.dark-mode button, 
+body.dark-mode .btn-primary, 
+body.dark-mode .save-btn,
+body.dark-mode .reserve-btn,
+body.dark-mode .favorite-reserve-btn {
+    background-color: var(--accent-blue) !important;
+    color: white !important;
+}
+
+body.dark-mode form, 
+body.dark-mode .profile-card, 
+body.dark-mode .edit-profile-container,
+body.dark-mode .welcome-section {
+    background-color: var(--card-bg) !important;
+    color: var(--text-color) !important;
+}
+
+body.dark-mode form label, 
+body.dark-mode form h1, 
+body.dark-mode form h2, 
+body.dark-mode form h3,
+body.dark-mode .profile-card h2 {
+    color: #ffffff !important;
+}
+
+body.dark-mode input[type="text"], 
+body.dark-mode input[type="email"], 
+body.dark-mode input[type="password"], 
+body.dark-mode input[type="tel"], 
+body.dark-mode select {
+    background-color: #2d2d2d !important;
+    color: #ffffff !important;
+    border: 1px solid #444444 !important;
+}
+
+body.dark-mode .modal, 
+body.dark-mode .modal-content, 
+body.dark-mode #back-modal div,
+body.dark-mode #logout-modal div {
+    background-color: var(--modal-bg) !important;
+    color: #ffffff !important;
+    border: 1px solid #444444 !important;
+}
+
+body.dark-mode #back-modal p, 
+body.dark-mode #back-modal h3, 
+body.dark-mode #logout-modal p,
+body.dark-mode #logout-modal h3,
+body.dark-mode .modal-content p,
+body.dark-mode .modal-content h3 {
+    color: #ffffff !important;
+}
+
+body.dark-mode .cancel-btn, 
+body.dark-mode #cancel-btn,
+body.dark-mode #logout-cancel-btn {
+    background-color: #444444 !important;
+    color: #ffffff !important;
+}
+
+.status-message-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  width: 90%;
+  margin: 30px auto;
+}
+
+.loading-state p {
+  font-weight: bold;
+  color: #2170FF;
+  margin-top: 15px;
+}
+
+.no-data-state p {
+  font-weight: bold;
+  color: #555555;
+  font-size: 1.1em;
+}
+
+.error-state p {
+  font-weight: bold;
+  color: #D32F2F;
+  font-size: 1.2em;
+  margin-bottom: 8px;
+}
+
+.error-details {
+  color: #777777;
+  font-size: 0.95em;
+}
+
+.spinner {
+  width: 45px;
+  height: 45px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #2170FF; 
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.station-message {
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.station-message.success-msg {
+  background-color: #E8F5E9;
+  color: #2E7D32;
+  border: 1px solid #2E7D32;
+}
+
+.station-message.error-msg {
+  background-color: #FFEAEA;
+  color: #D32F2F;
+  border: 1px solid #D32F2F;
+}
+
+
+
+
+
+

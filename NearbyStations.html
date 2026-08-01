@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nearby Stations</title>
+
+    <link rel="stylesheet" href="./CSS/Global.css">
+    <link rel="stylesheet" href="./CSS/Stations.css">
+
+    <script src="./JS/config.js"></script>
+    <script src="./JS/stations.js" defer></script>
+    <script src="./JS/GlobalNavigation.js" defer></script>
+</head>
+
+<body>
+
+    <header class="main-header">
+        <nav class="nav-container">
+
+            <div class="logo-container">
+                <img src="./Images/Logo.png" alt="EV Charge Logo" class="logo-img">
+                <span class="logo">EV Charge</span>
+            </div>
+
+            <div class="nav-icons">
+                <span class="icon" id="contact-btn">Contact</span>
+                <span class="icon" id="settings-btn">Settings</span>
+            </div>
+
+        </nav>
+    </header>
+
+    <main class="main-content">
+
+        <div class="back-navigation">
+            <button class="back-btn" id="back-main-btn">
+                &#9664; Back to main menu
+            </button>
+        </div>
+
+        <section id="stations-container" class="stations-grid">
+            <!-- Station cards are loaded dynamically by stations.js -->
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>© 2026 EV Charge. All rights reserved to Mickey Zilberman and Gil Cohen.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

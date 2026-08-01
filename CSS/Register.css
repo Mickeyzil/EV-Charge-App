@@ -1,0 +1,412 @@
+.register-page {
+  max-width: 600px;
+}
+
+.register-title {
+  text-align: center;
+  color: #1A365D;
+  margin: 20px 0;
+}
+
+.register-title h1 {
+  font-size: 2.2em;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.register-title p {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-top: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 1.25em;
+  font-weight: 800;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.form-group input {
+  height: 56px;
+  border: none;
+  border-radius: 999px;
+  background-color: #ffffff;
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: 700;
+  color: #000000;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.form-group input::placeholder {
+  color: #7d9bc4;
+  font-weight: 500;
+}
+
+.form-group input:focus {
+  outline: 3px solid #2170FF;
+}
+
+.register-btn {
+  height: 58px;
+  border: none;
+  border-radius: 999px;
+  background-color: #2170FF;
+  color: #ffffff;
+  font-size: 1.25em;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(33, 112, 255, 0.3);
+}
+
+.register-btn:hover {
+  background-color: #1656c9;
+}
+
+.back-login-btn {
+  background: transparent;
+  border: none;
+  color: #1A365D;
+  font-size: 1.05em;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.back-login-btn:hover {
+  color: #2170FF;
+}
+
+.register-message {
+  border-radius: 16px;
+  padding: 14px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.register-message.error {
+  background-color: #FFEAEA;
+  color: #D32F2F;
+  border: 2px solid #D32F2F;
+}
+
+.register-message.success {
+  background-color: #E8F8EE;
+  color: #0A8F3C;
+  border: 2px solid #0A8F3C;
+}
+
+.hidden {
+  display: none !important;
+}
+
+@media (max-width: 480px) {
+  .register-title h1 {
+    font-size: 1.8em;
+  }
+
+  .form-group label {
+    font-size: 1.1em;
+  }
+
+  .form-group input {
+    height: 50px;
+    font-size: 1em;
+  }
+
+  .register-btn {
+    height: 52px;
+    font-size: 1.1em;
+  }
+}
+
+.nav-icons .icon {
+    background-color: #ffffff;    
+    color: #2170FF;               
+    border: 2px solid #2170FF;    
+    border-radius: 999px;        
+    padding: 8px 18px;           
+    font-size: 0.95em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;   
+    box-shadow: 0 2px 6px rgba(33, 112, 255, 0.1); 
+}
+
+.nav-icons .icon:hover {
+    background-color: #2170FF;    
+    color: #ffffff;               
+    box-shadow: 0 4px 10px rgba(33, 112, 255, 0.2);
+    transform: translateY(-1px);  
+}
+
+.nav-icons .icon:active {
+    transform: translateY(1px);   
+}
+
+.form-group select {
+  height: 56px;
+  border: none;
+  border-radius: 999px;
+  background-color: #ffffff;
+  font-size: 1.1em;
+  font-weight: 700;
+  color: #000000;
+  padding: 0 20px;
+  box-sizing: border-box;
+  cursor: pointer;
+  text-align-last: center; 
+  appearance: none; 
+}
+
+.form-group select:focus {
+  outline: 3px solid #2170FF;
+}
+
+.message-banner {
+    padding: 12px;
+    margin: 15px 0;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+.message-banner.hidden {
+    display: none;
+}
+.error-msg {
+    background-color: #ffebee;
+    color: #c62828;
+    border: 1px solid #ffcdd2;
+}
+.success-msg {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #c8e6c9;
+}
+
+.confirmation-card {
+    text-align: center;
+    background-color: #2170FF;
+    color: white;
+    padding: 40px;
+    border-radius: 15px;
+    margin-top: 30px;
+}
+.confirmation-details {
+    margin: 20px 0;
+}
+.confirmation-details p {
+    margin: 10px 0;
+}
+.confirmation-email-tip {
+    margin-top: 10px;
+    font-size: 0.9em;
+    opacity: 0.9;
+}
+.back-menu-btn {
+    margin-top: 25px;
+    background-color: white;
+    color: #2170FF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.back-menu-btn:hover {
+    background-color: #f0f4ff;
+}
+
+.submit-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+.register-page {
+  max-width: 600px;
+}
+
+.register-title {
+  text-align: center;
+  color: #1A365D;
+  margin: 20px 0;
+}
+
+.register-title h1 {
+  font-size: 2.2em;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.register-title p {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-top: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 1.25em;
+  font-weight: 800;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.form-group input {
+  height: 56px;
+  border: none;
+  border-radius: 999px;
+  background-color: #ffffff;
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: 700;
+  color: #000000;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  outline: 3px solid #2170FF;
+}
+
+.form-group input::placeholder {
+  color: #A0AEC0;
+  font-weight: 600;
+}
+
+.register-btn {
+  height: 64px;
+  border: none;
+  border-radius: 999px;
+  background-color: #2170FF;
+  color: #ffffff;
+  font-size: 1.5em;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.register-btn:hover {
+  background-color: #0052FF;
+}
+
+.register-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.back-login-btn {
+  height: 64px;
+  border: 3px solid #000000;
+  border-radius: 999px;
+  background-color: transparent;
+  color: #000000;
+  font-size: 1.5em;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.back-login-btn:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.form-group-select {
+  height: 56px;
+  border: none;
+  border-radius: 999px;
+  background-color: #ffffff;
+  font-size: 1.1em;
+  font-weight: 700;
+  color: #000000;
+  padding: 0 20px;
+  box-sizing: border-box;
+  cursor: pointer;
+  text-align-last: center; 
+  appearance: none; 
+}
+
+.form-group select:focus {
+  outline: 3px solid #2170FF;
+}
+
+.message-banner {
+    padding: 12px;
+    margin: 15px 0;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.message-banner.hidden {
+    display: none;
+}
+
+.error-msg {
+    background-color: #ffebee;
+    color: #c62828;
+    border: 1px solid #ffcdd2;
+}
+
+.success-msg {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #c8e6c9;
+}
+
+.confirmation-card {
+    text-align: center;
+    background-color: #2170FF;
+    color: white;
+}
+
+.spinner-container {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.spinner {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 4px solid rgba(33, 112, 255, 0.1);
+    border-left-color: #2170FF;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

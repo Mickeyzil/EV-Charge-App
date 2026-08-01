@@ -1,0 +1,1 @@
+window.API_URL = "https://ev-charge-backend-27a3.onrender.com";

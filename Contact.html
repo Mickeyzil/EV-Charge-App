@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+
+    <link rel="stylesheet" href="./CSS/Global.css">
+    <link rel="stylesheet" href="./CSS/Contact.css">
+    <script src="./JS/config.js"></script>
+    <script src="./JS/Contact.js" defer></script>
+    <script src="./JS/GlobalNavigation.js" defer></script>
+</head>
+
+<body>
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="logo-container">
+                <img src="./Images/Logo.png" alt="EV Charge Logo" class="logo-img">
+                <span class="logo">EV Charge</span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="contact-section">
+            <div class="contact-card">
+                <h1>Contact Us</h1>
+                <p>Need help? Send us a message and our support team will contact you.</p>
+
+                <form id="contact-form">
+                    <input type="text" id="full-name" placeholder="Full Name">
+                    <input type="email" id="email" placeholder="Email Address">
+                    <textarea id="message" placeholder="Write your message here"></textarea>
+
+                    <button type="submit" class="send-btn">Send Message</button>
+                    <button type="button" id="back-btn" class="back-btn">Back</button>
+                </form>
+
+                <p id="contact-message" class="contact-message hidden"></p>
+            </div>
+        </section>
+    </main>
+    <footer class="main-footer">
+    <p>
+        © 2026 EV Charge. All rights reserved to Mickey Zilberman and Gil Cohen.
+    </p>
+</footer>
+</body>
+
+</html>

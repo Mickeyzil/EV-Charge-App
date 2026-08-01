@@ -1,0 +1,149 @@
+
+.message-banner {
+    max-width: 520px;
+    margin: 20px auto 30px;
+    padding: 16px 20px;
+    border-radius: 18px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    animation: fadeMessage 0.25s ease;
+}
+
+.message-banner.error-msg {
+    background: #FFEAEA;
+    color: #D32F2F;
+    border: 2px solid #D32F2F;
+}
+
+.message-banner.success-msg {
+    background: #E8F5E9;
+    color: #2E7D32;
+    border: 2px solid #2E7D32;
+}
+
+#reservation-form {
+    max-width: 520px;
+    margin: 30px auto;
+    padding: 30px 22px;
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.18);
+}
+
+#reservation-form select {
+    height: 58px;
+    border-radius: 12px;
+    border: none;
+    background-color: #ffffff;
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #000000;
+    padding: 0 14px;
+}
+
+#reservation-form input[readonly] {
+    background-color: #ffffff;
+    color: #000000;
+    cursor: not-allowed;
+}
+
+#arrival-date,
+#arrival-time {
+    cursor: pointer;
+}
+
+#submit-reservation-btn:disabled {
+    background-color: #9BBDFB;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.confirmation-card {
+    max-width: 600px;
+    margin: 40px auto;
+    background: #ffffff;
+    border-radius: 28px;
+    padding: 40px 35px;
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    animation: fadeMessage 0.35s ease;
+}
+
+.confirmation-card h1 {
+    color: #2170FF;
+    font-size: 2.3rem;
+    margin-bottom: 15px;
+}
+
+.confirmation-card > p {
+    color: #1A365D;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.confirmation-details {
+    background: #F4F8FF;
+    border-radius: 20px;
+    padding: 25px;
+    margin: 30px 0;
+    text-align: left;
+    border: 2px solid #E3EEFF;
+}
+
+.confirmation-details p {
+    margin: 14px 0;
+    color: #1A365D;
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.confirmation-details strong {
+    color: #2170FF;
+}
+
+.confirmation-email-tip {
+    background: #EEF7FF;
+    padding: 15px;
+    border-radius: 14px;
+    margin-top: 20px;
+    color: #1A365D;
+    font-weight: bold;
+}
+
+.back-menu-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    padding: 16px 40px;
+    background: #2170FF;
+    color: white;
+    border: none;
+    border-radius: 999px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 6px 16px rgba(33, 112, 255, 0.35);
+}
+
+.back-menu-btn:hover {
+    background: #1A56CC;
+    transform: translateY(-2px);
+}
+
+.back-menu-btn:active {
+    transform: scale(0.98);
+}
+
+@keyframes fadeMessage {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
