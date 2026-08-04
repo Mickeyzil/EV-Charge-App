@@ -19,6 +19,11 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    if (!notificationsToggle || !darkToggle || !favoritesToggle || !saveBtn || !backBtn || !result) {
+        console.warn("Settings page is missing one or more required elements.");
+        return;
+    }
+
     notificationsToggle.checked = localStorage.getItem("notifications") === "true";
     darkToggle.checked = localStorage.getItem("darkMode") === "true";
     favoritesToggle.checked = localStorage.getItem("saveFavorites") === "true";
@@ -44,6 +49,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     backBtn.addEventListener("click", () => {
-        window.history.back();
+        // Settings always returns to the dashboard. Using replace prevents a
+        // Payment Methods -> Settings -> Payment Methods navigation loop.
+        window.location.replace("MainMenu.html");
     });
 });

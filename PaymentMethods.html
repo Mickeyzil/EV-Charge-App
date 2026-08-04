@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f4f8ff">
+  <title>Payment Methods | EV Charge</title>
+
+  <link rel="stylesheet" href="./CSS/Global.css">
+  <link rel="stylesheet" href="./CSS/PaymentMethods.css">
+
+  <script src="./JS/config.js"></script>
+  <script src="./JS/GlobalNavigation.js" defer></script>
+  <script src="./JS/PaymentConfig.js" defer></script>
+  <script src="./JS/PaymentMethods.js" defer></script>
+</head>
+
+<body class="payment-page">
+  <header class="main-header">
+    <nav class="nav-container" aria-label="Main navigation">
+      <div class="logo-container" role="link" tabindex="0" aria-label="Go to main menu">
+        <img src="./Images/Logo.png" alt="" class="logo-img">
+        <span class="logo">EV Charge</span>
+      </div>
+
+      <div class="nav-icons">
+        <button class="icon" id="contact-btn" type="button">Contact</button>
+        <button class="icon" id="settings-btn" type="button">Settings</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="payment-main">
+    <div class="back-navigation">
+      <button class="back-btn" id="back-btn" type="button">
+        <span aria-hidden="true">&#8592;</span>
+        <span>Back to Settings</span>
+      </button>
+    </div>
+
+    <section class="payment-layout" aria-labelledby="payment-title">
+      <aside class="payment-overview">
+        <div class="overview-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" focusable="false">
+            <path d="M3.5 7.25h17m-15.25-3h13.5A2.25 2.25 0 0 1 21 6.5v11A2.25 2.25 0 0 1 18.75 19.75H5.25A2.25 2.25 0 0 1 3 17.5v-11a2.25 2.25 0 0 1 2.25-2.25ZM6.75 15.75h4" />
+          </svg>
+        </div>
+        <span class="eyebrow">EV CHARGE WALLET</span>
+        <h1 id="payment-title">Your payments, ready when you are</h1>
+        <p>Add a preferred payment method once, then choose it quickly when reserving a charger.</p>
+
+        <ul class="trust-list" aria-label="Payment security features">
+          <li>
+            <span class="trust-icon" aria-hidden="true">&#10003;</span>
+            <span><strong>Protected card details</strong><small>Only masked card information is displayed.</small></span>
+          </li>
+          <li>
+            <span class="trust-icon" aria-hidden="true">&#10003;</span>
+            <span><strong>Flexible checkout</strong><small>Card, PayPal and Apple Pay ready.</small></span>
+          </li>
+          <li>
+            <span class="trust-icon" aria-hidden="true">&#10003;</span>
+            <span><strong>You stay in control</strong><small>Change the default method or remove a card.</small></span>
+          </li>
+        </ul>
+
+        <div class="security-summary">
+          <span class="security-shield" aria-hidden="true">&#128274;</span>
+          <div>
+            <strong>Secure by design</strong>
+            <p>EV Charge never displays or saves a full card number or security code.</p>
+          </div>
+        </div>
+      </aside>
+
+      <section class="wallet-panel" aria-label="Payment methods">
+        <div class="panel-heading">
+          <div>
+            <span class="eyebrow">PAYMENT METHODS</span>
+            <h2>Manage your wallet</h2>
+            <p>Select the method you want EV Charge to use by default.</p>
+          </div>
+          <span class="secure-badge"><span aria-hidden="true">&#10003;</span> Secure wallet</span>
+        </div>
+
+        <div id="payment-message" class="payment-message hidden" role="status" aria-live="polite"></div>
+
+        <section class="wallet-section" aria-labelledby="saved-cards-title">
+          <div class="section-heading">
+            <div>
+              <h3 id="saved-cards-title">Saved cards</h3>
+              <p id="card-count">No cards saved</p>
+            </div>
+            <button class="add-card-btn" id="add-card-btn" type="button">
+              <span aria-hidden="true">+</span>
+              Add card
+            </button>
+          </div>
+
+          <div class="card-list" id="card-list" aria-live="polite"></div>
+
+          <div class="empty-wallet" id="empty-wallet">
+            <span class="empty-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false">
+                <path d="M4 7.5h16v11H4a2 2 0 0 1-2-2v-11m2 2V5.75A1.75 1.75 0 0 1 5.75 4h11.5A1.75 1.75 0 0 1 19 5.75V7.5m-2.5 5.5h3.5" />
+              </svg>
+            </span>
+            <h4>No saved cards yet</h4>
+            <p>Add a card now to make your next charging reservation faster.</p>
+            <button class="empty-add-btn" id="empty-add-btn" type="button">Add your first card</button>
+          </div>
+        </section>
+
+        <section class="wallet-section express-section" aria-labelledby="express-title">
+          <div class="section-heading">
+            <div>
+              <h3 id="express-title">Express checkout</h3>
+              <p>Choose another secure way to pay at checkout.</p>
+            </div>
+          </div>
+
+          <div class="express-grid">
+            <article class="provider-card" data-provider="paypal">
+              <div class="provider-logo paypal-logo" aria-label="PayPal">
+                <span>Pay</span><span>Pal</span>
+              </div>
+              <div class="provider-copy">
+                <div class="provider-title-row">
+                  <h4>PayPal</h4>
+                  <span class="provider-status" id="paypal-status">Account not linked</span>
+                </div>
+                <p>Continue securely to PayPal without sharing your PayPal password with EV Charge.</p>
+                <span class="provider-trust"><span aria-hidden="true">&#128274;</span> Secure PayPal handoff</span>
+              </div>
+              <button class="provider-btn provider-btn-paypal" id="paypal-btn" type="button">
+                <span>Continue with</span>
+                <strong>PayPal</strong>
+              </button>
+            </article>
+
+            <article class="provider-card" data-provider="apple-pay">
+              <div class="provider-logo apple-logo" aria-label="Apple Pay">
+                <span class="apple-symbol" aria-hidden="true">&#63743;</span>
+                <span>Pay</span>
+              </div>
+              <div class="provider-copy">
+                <div class="provider-title-row">
+                  <h4>Apple Pay</h4>
+                  <span class="provider-status" id="apple-status">Checking device...</span>
+                </div>
+                <p>Pay from Apple Wallet on a compatible device when you confirm a reservation.</p>
+                <span class="provider-trust"><span aria-hidden="true">&#128274;</span> Card details stay in Wallet</span>
+              </div>
+              <button class="provider-btn provider-btn-apple" id="apple-pay-btn" type="button">
+                <span class="apple-symbol" aria-hidden="true">&#63743;</span>
+                <strong>Pay</strong>
+              </button>
+            </article>
+          </div>
+        </section>
+
+        <div class="wallet-footer-note">
+          <span aria-hidden="true">&#9432;</span>
+          <p><strong>Safe demo mode.</strong> Provider pages can open, but EV Charge will not claim that an account is connected or take a real payment until the secure server integration is enabled.</p>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <div class="footer-content">
+      <p>© 2026 EV Charge. All rights reserved to Mickey Zilberman and Gil Cohen.</p>
+    </div>
+  </footer>
+
+  <div class="modal-backdrop hidden" id="card-modal" aria-hidden="true">
+    <section class="payment-modal" role="dialog" aria-modal="true" aria-labelledby="card-modal-title">
+      <div class="modal-heading">
+        <div>
+          <span class="eyebrow">NEW PAYMENT METHOD</span>
+          <h2 id="card-modal-title">Add a payment card</h2>
+          <p>Your full card details are used only to validate this demo and are never stored.</p>
+        </div>
+        <button class="modal-close" id="card-modal-close" type="button" aria-label="Close add card dialog">&times;</button>
+      </div>
+
+      <form id="card-form" novalidate>
+        <div class="card-preview" id="card-preview" aria-hidden="true">
+          <div class="preview-top">
+            <span class="preview-chip"></span>
+            <span class="preview-brand" id="preview-brand">CARD</span>
+          </div>
+          <p class="preview-number" id="preview-number">•••• •••• •••• ••••</p>
+          <div class="preview-bottom">
+            <span><small>CARDHOLDER</small><strong id="preview-name">YOUR NAME</strong></span>
+            <span><small>EXPIRES</small><strong id="preview-expiry">MM/YY</strong></span>
+          </div>
+        </div>
+
+        <div class="card-form-grid">
+          <div class="form-field form-field-wide">
+            <label for="cardholder-name">Name on card</label>
+            <input id="cardholder-name" name="cardholder-name" type="text" autocomplete="cc-name"
+              placeholder="Gil Cohen" maxlength="70" required>
+            <p class="field-error hidden" id="cardholder-error" role="alert"></p>
+          </div>
+
+          <div class="form-field form-field-wide">
+            <label for="card-number">Card number</label>
+            <div class="input-with-brand">
+              <input id="card-number" name="card-number" type="text" inputmode="numeric"
+                autocomplete="cc-number" placeholder="1234 5678 9012 3456" maxlength="23"
+                aria-describedby="card-number-hint card-number-error" required>
+              <span class="detected-brand" id="detected-brand" aria-hidden="true">CARD</span>
+            </div>
+            <p class="field-hint" id="card-number-hint">Use a valid test card number for this front-end demo.</p>
+            <p class="field-error hidden" id="card-number-error" role="alert"></p>
+          </div>
+
+          <div class="form-field">
+            <label for="card-expiry">Expiry date</label>
+            <input id="card-expiry" name="card-expiry" type="text" inputmode="numeric"
+              autocomplete="cc-exp" placeholder="MM/YY" maxlength="5" required>
+            <p class="field-error hidden" id="card-expiry-error" role="alert"></p>
+          </div>
+
+          <div class="form-field">
+            <label for="card-cvc">Security code</label>
+            <input id="card-cvc" name="card-cvc" type="password" inputmode="numeric"
+              autocomplete="cc-csc" placeholder="CVC" maxlength="4" required>
+            <p class="field-error hidden" id="card-cvc-error" role="alert"></p>
+          </div>
+        </div>
+
+        <label class="default-checkbox">
+          <input id="make-default" type="checkbox" checked>
+          <span class="custom-checkbox" aria-hidden="true"></span>
+          <span><strong>Use as my default card</strong><small>You can change this at any time.</small></span>
+        </label>
+
+        <div class="modal-security-note">
+          <span aria-hidden="true">&#128274;</span>
+          <p>For production, these fields will be replaced by secure provider-hosted payment fields.</p>
+        </div>
+
+        <div class="modal-actions">
+          <button class="secondary-btn" id="cancel-card-btn" type="button">Cancel</button>
+          <button class="primary-btn" id="save-card-btn" type="submit">
+            <span class="button-label">Save card</span>
+            <span class="button-loader hidden" aria-hidden="true"></span>
+          </button>
+        </div>
+      </form>
+    </section>
+  </div>
+
+  <div class="modal-backdrop hidden" id="provider-modal" aria-hidden="true">
+    <section class="payment-modal provider-modal" role="dialog" aria-modal="true"
+      aria-labelledby="provider-modal-title" aria-describedby="provider-modal-description">
+      <div class="modal-heading provider-modal-heading">
+        <div class="provider-modal-brand" id="provider-modal-brand" aria-hidden="true"></div>
+        <button class="modal-close" id="provider-modal-close" type="button"
+          aria-label="Close payment provider dialog">&times;</button>
+      </div>
+
+      <span class="provider-modal-kicker" id="provider-modal-kicker">SECURE HANDOFF</span>
+      <h2 id="provider-modal-title">Continue securely</h2>
+      <p id="provider-modal-description">You are leaving EV Charge for the official payment provider.</p>
+
+      <div class="provider-handoff" aria-hidden="true">
+        <span class="handoff-stop handoff-ev">EV</span>
+        <span class="handoff-line"><span>&#128274;</span></span>
+        <span class="handoff-stop" id="provider-handoff-logo">Pay</span>
+      </div>
+
+      <div class="provider-assurance">
+        <span class="provider-assurance-icon" aria-hidden="true">&#10003;</span>
+        <div>
+          <strong id="provider-assurance-title">Your sign-in stays private</strong>
+          <p id="provider-assurance-text">EV Charge never receives your provider password.</p>
+        </div>
+      </div>
+
+      <div class="provider-demo-note" id="provider-demo-note">
+        <span aria-hidden="true">DEMO</span>
+        <p>The official provider page will open, but returning from it will not link an account until the EV Charge server is connected.</p>
+      </div>
+
+      <div class="modal-actions">
+        <button class="secondary-btn" id="provider-modal-cancel" type="button">Not now</button>
+        <a class="primary-btn provider-primary-link" id="provider-primary-link"
+          href="#" target="_blank" rel="noopener noreferrer">
+          <span id="provider-primary-label">Continue</span>
+          <span aria-hidden="true">&#8599;</span>
+        </a>
+      </div>
+
+      <p class="provider-external-note" id="provider-external-note">Opens the provider's official website in a new tab.</p>
+    </section>
+  </div>
+
+  <div class="modal-backdrop hidden" id="delete-modal" aria-hidden="true">
+    <section class="payment-modal confirmation-modal" role="dialog" aria-modal="true" aria-labelledby="delete-title">
+      <span class="delete-modal-icon" aria-hidden="true">!</span>
+      <h2 id="delete-title">Remove this card?</h2>
+      <p id="delete-description">This payment method will no longer be available at checkout.</p>
+      <div class="modal-actions">
+        <button class="secondary-btn" id="cancel-delete-btn" type="button">Keep card</button>
+        <button class="danger-btn" id="confirm-delete-btn" type="button">Remove card</button>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>

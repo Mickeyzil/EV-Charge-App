@@ -15,16 +15,14 @@
 
 <body>
     <header class="main-header">
-        <nav class="nav-container">
+        <nav class="nav-container" aria-label="Main navigation">
             <div class="logo-container">
                 <img src="./Images/Logo.png" alt="EV Charge Logo" class="logo-img">
                 <span class="logo">EV Charge</span>
             </div>
 
             <div class="nav-icons">
-                <div class="nav-icons">
-                    <span class="icon" id="contact-btn">Contact</span>
-                </div>
+                <button class="icon" id="contact-btn" type="button">Contact</button>
             </div>
         </nav>
     </header>
@@ -37,13 +35,23 @@
             </div>
 
             <div class="settings-list">
+                <a class="setting-row setting-link" id="payment-methods-btn" href="PaymentMethods.html">
+                    <span class="setting-link-icon" aria-hidden="true">&#128179;</span>
+                    <span class="setting-link-copy">
+                        <span class="setting-link-title">Payment Methods</span>
+                        <span class="setting-link-description">Manage cards, PayPal and Apple Pay.</span>
+                    </span>
+                    <span class="setting-link-status">Secure wallet</span>
+                    <span class="setting-link-arrow" aria-hidden="true">&#8250;</span>
+                </a>
+
                 <div class="setting-row">
                     <div>
                         <h3>Notifications</h3>
                         <p>Receive updates about reservations.</p>
                     </div>
                     <label class="switch">
-                        <input type="checkbox" id="notifications-toggle">
+                        <input type="checkbox" id="notifications-toggle" aria-label="Enable reservation notifications">
                         <span class="slider"></span>
                     </label>
                 </div>
@@ -54,7 +62,7 @@
                         <p>Use a darker visual mode.</p>
                     </div>
                     <label class="switch">
-                        <input type="checkbox" id="dark-toggle">
+                        <input type="checkbox" id="dark-toggle" aria-label="Enable dark mode">
                         <span class="slider"></span>
                     </label>
                 </div>
@@ -65,14 +73,14 @@
                         <p>Keep your favorite charging stations saved.</p>
                     </div>
                     <label class="switch">
-                        <input type="checkbox" id="favorites-toggle">
+                        <input type="checkbox" id="favorites-toggle" aria-label="Save favorite stations">
                         <span class="slider"></span>
                     </label>
                 </div>
             </div>
 
-            <button id="save-settings-btn" class="save-btn">Save Settings</button>
-            <button id="back-btn" class="back-btn">Back</button>
+            <button id="save-settings-btn" class="save-btn" type="button">Save Settings</button>
+            <button id="back-btn" class="back-btn" type="button">Back</button>
 
             <p id="settings-result" class="settings-result hidden"></p>
         </section>
